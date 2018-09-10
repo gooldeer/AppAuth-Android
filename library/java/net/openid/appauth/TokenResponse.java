@@ -14,12 +14,6 @@
 
 package net.openid.appauth;
 
-import static net.openid.appauth.AdditionalParamsProcessor.checkAdditionalParams;
-import static net.openid.appauth.AdditionalParamsProcessor.extractAdditionalParams;
-import static net.openid.appauth.Preconditions.checkNotEmpty;
-import static net.openid.appauth.Preconditions.checkNotNull;
-import static net.openid.appauth.Preconditions.checkNullOrNotEmpty;
-
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.VisibleForTesting;
@@ -34,6 +28,12 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import static net.openid.appauth.AdditionalParamsProcessor.checkAdditionalParams;
+import static net.openid.appauth.AdditionalParamsProcessor.extractAdditionalParams;
+import static net.openid.appauth.Preconditions.checkNotEmpty;
+import static net.openid.appauth.Preconditions.checkNotNull;
+import static net.openid.appauth.Preconditions.checkNullOrNotEmpty;
 
 /**
  * A response to a token request.
@@ -213,7 +213,7 @@ public class TokenResponse {
          */
         @NonNull
         public Builder fromResponseJson(@NonNull JSONObject json) throws JSONException {
-            setTokenType(JsonUtil.getString(json, KEY_TOKEN_TYPE));
+            setTokenType(JsonUtil.getStringIfDefined(json, KEY_TOKEN_TYPE));
             setAccessToken(JsonUtil.getStringIfDefined(json, KEY_ACCESS_TOKEN));
             setAccessTokenExpirationTime(JsonUtil.getLongIfDefined(json, KEY_EXPIRES_AT));
             if (json.has(KEY_EXPIRES_IN)) {
