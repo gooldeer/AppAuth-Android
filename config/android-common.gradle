@@ -1,11 +1,11 @@
 android {
-    compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
     defaultConfig {
-        minSdkVersion rootProject.minSdkVersion
-        targetSdkVersion rootProject.compileSdkVersion
-        versionCode rootProject.versionNum
-        versionName rootProject.versionName
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 15
+        versionName "1.4.1"
     }
     sourceSets {
         main.manifest.srcFile 'AndroidManifest.xml'
@@ -36,7 +36,7 @@ task jar(type: Copy, dependsOn:'bundleRelease') {
     from("${project.buildDir}/intermediates/bundles/release/")
     into("${project.buildDir}/libs/")
     include('classes.jar')
-    rename('classes.jar', "appauth-${rootProject.versionName}.jar")
+    rename('classes.jar', "appauth-1.4.1.jar")
 }
 
 // produces a JAR containing sources
