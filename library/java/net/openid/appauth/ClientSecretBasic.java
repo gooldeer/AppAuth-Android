@@ -14,15 +14,16 @@
 
 package net.openid.appauth;
 
-import static net.openid.appauth.Preconditions.checkNotNull;
-
-import android.support.annotation.NonNull;
 import android.util.Base64;
+
+import androidx.annotation.NonNull;
 
 import net.openid.appauth.internal.UriUtil;
 
 import java.util.Collections;
 import java.util.Map;
+
+import static net.openid.appauth.Preconditions.checkNotNull;
 
 /**
  * Implementation of the client authentication method 'client_secret_basic'.

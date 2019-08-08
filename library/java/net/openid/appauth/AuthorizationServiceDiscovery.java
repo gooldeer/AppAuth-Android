@@ -14,12 +14,11 @@
 
 package net.openid.appauth;
 
-import static net.openid.appauth.Preconditions.checkNotNull;
-
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.VisibleForTesting;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
 
 import net.openid.appauth.JsonUtil.BooleanField;
 import net.openid.appauth.JsonUtil.Field;
@@ -33,6 +32,8 @@ import org.json.JSONObject;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import static net.openid.appauth.Preconditions.checkNotNull;
 
 /**
  * An OpenID Connect 1.0 Discovery Document.

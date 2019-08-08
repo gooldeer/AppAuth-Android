@@ -1,13 +1,12 @@
 package net.openid.appauth;
 
-import android.support.annotation.Nullable;
 import android.util.Base64;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import androidx.annotation.Nullable;
+
 import net.openid.appauth.AuthorizationServiceDiscovery.MissingArgumentException;
 import net.openid.appauth.IdToken.IdTokenException;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,6 +14,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import static net.openid.appauth.AuthorizationServiceDiscoveryTest.TEST_AUTHORIZATION_ENDPOINT;
 import static net.openid.appauth.AuthorizationServiceDiscoveryTest.TEST_CLAIMS_SUPPORTED;

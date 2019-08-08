@@ -14,12 +14,10 @@
 
 package net.openid.appauth;
 
-import static net.openid.appauth.Preconditions.checkArgument;
-import static net.openid.appauth.Preconditions.checkNotNull;
-
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,6 +29,9 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+
+import static net.openid.appauth.Preconditions.checkArgument;
+import static net.openid.appauth.Preconditions.checkNotNull;
 
 /**
  * Utility methods for handling additional parameters in requests and responses.

@@ -14,16 +14,13 @@
 
 package net.openid.appauth;
 
-import static net.openid.appauth.Preconditions.checkArgument;
-import static net.openid.appauth.Preconditions.checkNotNull;
-
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import net.openid.appauth.AuthorizationException.GeneralErrors;
-
 import net.openid.appauth.connectivity.ConnectionBuilder;
 import net.openid.appauth.connectivity.DefaultConnectionBuilder;
 import net.openid.appauth.internal.Logger;
@@ -34,6 +31,9 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+
+import static net.openid.appauth.Preconditions.checkArgument;
+import static net.openid.appauth.Preconditions.checkNotNull;
 
 /**
  * Configuration details required to interact with an authorization service.

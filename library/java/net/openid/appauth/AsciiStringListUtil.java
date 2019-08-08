@@ -14,15 +14,16 @@
 
 package net.openid.appauth;
 
-import static net.openid.appauth.Preconditions.checkArgument;
-
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
+
+import androidx.annotation.Nullable;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
+import static net.openid.appauth.Preconditions.checkArgument;
 
 /**
  * Convenience methods for building and parsing space-delimited string lists, which are
